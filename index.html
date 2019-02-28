@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem-tra-nam-nhuan</title>
+</head>
+<body>
+<script>
+    var year = parseInt(prompt("Enter add year"));
+
+    var isleapyear = false;
+
+    var isdivisivLeBy4 = year % 4 == 0;
+    if (isdivisivLeBy4) {
+        var isdivisivLeBy100 = year % 100 == 0;
+        if (isdivisivLeBy100) {
+            var isdivisivLeBy400 = year % 400 ==0;
+            if (isdivisivLeBy400) {
+                isleapyear = true;
+            }
+        }else {
+            isleapyear = true;
+        }
+    }
+    if (isleapyear) {
+        alert(year + "is a leap year")
+
+    }else {
+        alert(year + "is not a leap year")
+
+    }
+
+
+</script>
+</body>
+</html>
